@@ -141,7 +141,7 @@ body, html {
 
 @media (max-width: 500px) {
     .poem {
-        font-size: 2.5rem; /* Increase font size for mobile screens */
+        font-size: 5rem; /* Increase font size for mobile screens */
     }
 }
 
