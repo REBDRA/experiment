@@ -110,9 +110,9 @@ body, html {
     width: 100%;
 }
 
-/* Poem styling with consistent medium text size */
+/* Poem styling with responsive medium text size */
 .poem {
-    font-size: 1.8rem; /* Medium font size for all screens */
+    font-size: 4vw; /* Use viewport width for responsive scaling */
     line-height: 1.2; /* Improved readability */
     white-space: pre-wrap;
     color: #fff5e1; /* Light creamy color */
@@ -126,7 +126,19 @@ body, html {
     animation: gradientMove 10s linear infinite;
 }
 
-/* Remove media queries that change text size */
+/* Optional: Limit font size for extremely small or large screens */
+@media (max-width: 500px) {
+    .poem {
+        font-size: 5vw; /* Larger text for very small screens */
+    }
+}
+
+@media (min-width: 1600px) {
+    .poem {
+        font-size: 2rem; /* Cap the text size for very large screens */
+    }
+}
+
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
