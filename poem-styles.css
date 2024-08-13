@@ -1,0 +1,136 @@
+/* Common styles for all pages */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden;
+}
+
+/* Cosmic sky background */
+.cosmic-sky {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vw; /* Large enough to cover the area */
+    height: 200vh; /* Large enough to cover the area */
+    background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1; /* Ensure cosmic sky is behind other content */
+}
+
+.cosmic-sky::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: radial-gradient(#fff, #fff 1px, transparent 40px),
+                      radial-gradient(#fff, #fff 1px, transparent 30px),
+                      radial-gradient(#fff, #fff 1px, transparent 20px);
+    background-size: 400px 400px, 300px 300px, 200px 200px;
+    background-position: -150px -150px, 150px 150px, -100px -100px;
+    animation: rotate 90s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Planet and black hole effects */
+.cosmic-sky::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #000 20%, transparent 60%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%);
+    z-index: -2; /* Black hole behind stars */
+}
+
+/* Planet styling */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffb6c1, #ff69b4);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+}
+
+.planet:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+}
+
+.planet:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 70%;
+}
+
+.planet:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: 30%;
+}
+
+/* Poem container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* Ensure container is above cosmic sky */
+    text-align: center;
+}
+
+/* Adjust poem wrapper for left alignment */
+.poem-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Adjust this value to move the poem further left or right */
+    transform: translateY(-50%); /* Center vertically */
+    width: 80%; /* Responsive width to fit within the viewport */
+    max-width: 800px; /* Maximum width to prevent excessive stretching */
+    text-align: left; /* Center text horizontally within the wrapper */
+}
+
+
+/* Poem styling with cool colors */
+.poem {
+    font-size: 4vw; /* Responsive font size */
+    line-height: 1.2; /* Improved readability */
+    white-space: pre-wrap;
+    color: transparent; /* Ensure text color is transparent for gradient effect */
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Cool gradient colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Reduced shadow for better clarity */
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures animation stays within text */
+    animation: gradientMove 10s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}

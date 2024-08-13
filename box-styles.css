@@ -1,0 +1,107 @@
+/* Common styles for all pages */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Great Vibes', cursive, sans-serif; /* Elegant writing style */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at bottom, #1b2735 0%, #090a0f 100%); /* Cosmic background */
+    overflow: hidden;
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text container styles */
+.text-container {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3); /* Light, semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Text styles */
+.text {
+    font-size: 2.5rem; /* Adjusted text size */
+    color: #f0f0f0; /* Lighter text color */
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    z-index: 10;
+}
+
+/* Gift box link styles */
+.gift-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    text-decoration: none;
+}
+
+/* Box styles */
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear; /* Slow rotation for a mystical effect */
+}
+
+/* Faces of the cube */
+.box div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for better visibility */
+}
+
+/* Cosmic Face colors */
+.front, .back, .left, .right, .top, .bottom {
+    background: radial-gradient(circle at center, #3b0a45, #ad1c1c, #090a0f);
+    background-size: cover;
+}
+
+/* Ribbon styles */
+.ribbon {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(45deg, #ff4500, #ff6347);
+    z-index: 15;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ribbon tie styles */
+.ribbon-tie {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #ff4500, #ff6347);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 20;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
