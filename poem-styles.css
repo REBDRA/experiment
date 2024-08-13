@@ -12,8 +12,8 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 200vw; /* Large enough to cover the area */
-    height: 200vh; /* Large enough to cover the area */
+    width: 100vw; /* Adjust to fit the viewport */
+    height: 100vh; /* Adjust to fit the viewport */
     background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -29,11 +29,11 @@ body, html {
     width: 100%;
     height: 100%;
     background: transparent;
-    background-image: radial-gradient(#fff, #fff 1px, transparent 40px),
-                      radial-gradient(#fff, #fff 1px, transparent 30px),
-                      radial-gradient(#fff, #fff 1px, transparent 20px);
-    background-size: 400px 400px, 300px 300px, 200px 200px;
-    background-position: -150px -150px, 150px 150px, -100px -100px;
+    background-image: radial-gradient(#fff, #fff 1px, transparent 30px),
+                      radial-gradient(#fff, #fff 1px, transparent 40px),
+                      radial-gradient(#fff, #fff 1px, transparent 50px);
+    background-size: 300px 300px, 400px 400px, 500px 500px;
+    background-position: 0 0, 100px 100px, -100px -100px;
     animation: rotate 90s linear infinite;
 }
 
@@ -112,11 +112,11 @@ body, html {
 
 /* Poem styling with cool colors */
 .poem {
-    font-size: 4vw; /* Responsive font size */
+    font-size: 2rem; /* Base font size */
     line-height: 1.2; /* Improved readability */
     white-space: pre-wrap;
-     color: #fff5e1; /* Light creamy color */ 
-     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
+    color: #fff5e1; /* Light creamy color */
+    background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Reduced shadow for better clarity */
@@ -124,6 +124,25 @@ body, html {
     border-radius: 10px;
     overflow: hidden; /* Ensures animation stays within text */
     animation: gradientMove 10s linear infinite;
+}
+
+/* Responsive font sizes */
+@media (max-width: 1200px) {
+    .poem {
+        font-size: 1.5rem; /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .poem {
+        font-size: 1.2rem; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .poem {
+        font-size: 1rem; /* Adjust for mobile screens */
+    }
 }
 
 @keyframes gradientMove {
