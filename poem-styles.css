@@ -92,19 +92,22 @@ body, html {
 
 /* Poem container styles */
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
     display: flex;
-    justify-content: center; /* Center the container horizontally */
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding-left: 10%; /* Adjust to move container away from the edge */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 400px; /* Match the height of the black hole */
+    width: 400px; /* Match the width of the black hole */
     z-index: 1; /* Ensure container is above cosmic sky */
 }
 
-/* Poem wrapper for left-aligned text */
+/* Poem wrapper for centered text */
 .poem-wrapper {
     display: flex;
-    justify-content: flex-start; /* Align text to the left within the wrapper */
+    justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     height: 100%;
     width: 100%;
@@ -129,7 +132,7 @@ body, html {
 /* Optional: Limit font size for extremely small or large screens */
 @media (max-width: 500px) {
     .poem {
-        font-size: 5vw; /* Larger text for very small screens */
+        font-size: 10vw; /* Larger text for very small screens */
     }
 }
 
