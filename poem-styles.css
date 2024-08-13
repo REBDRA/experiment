@@ -93,33 +93,30 @@ body, html {
 /* Poem container styles */
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the container horizontally */
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-left: 10%; /* Adjust to move container away from the edge */
     z-index: 1; /* Ensure container is above cosmic sky */
-    text-align: center;
 }
 
-/* Adjust poem wrapper for left alignment */
+/* Poem wrapper for left-aligned text */
 .poem-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%; /* Adjust this value to move the poem further left or right */
-    transform: translateY(-50%); /* Center vertically */
-    width: 80%; /* Responsive width to fit within the viewport */
-    max-width: 800px; /* Maximum width to prevent excessive stretching */
-    text-align: left; /* Center text horizontally within the wrapper */
+    display: flex;
+    justify-content: flex-start; /* Align text to the left within the wrapper */
+    align-items: center; /* Center text vertically */
+    height: 100%;
+    width: 100%;
 }
-
 
 /* Poem styling with cool colors */
 .poem {
     font-size: 4vw; /* Responsive font size */
     line-height: 1.2; /* Improved readability */
     white-space: pre-wrap;
-    color: transparent; /* Ensure text color is transparent for gradient effect */
-    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Cool gradient colors */
+     color: #fff5e1; /* Light creamy color */ 
+     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Reduced shadow for better clarity */

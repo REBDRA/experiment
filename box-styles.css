@@ -6,7 +6,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at bottom, #1b2735 0%, #090a0f 100%); /* Cosmic background */
+    background: radial-gradient(circle at center, #c0c0f0, #e0e0ff); /* Soft, heavenly gradient */
     overflow: hidden;
 }
 
@@ -27,7 +27,7 @@ body, html {
     top: -50px;
     width: 100%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3); /* Light, semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.5); /* Light, semi-transparent background */
     padding: 10px;
     border-radius: 5px;
 }
@@ -36,7 +36,7 @@ body, html {
 .text {
     font-size: 2.5rem; /* Adjusted text size */
     color: #f0f0f0; /* Lighter text color */
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.3), 0 0 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
     z-index: 10;
 }
 
@@ -66,9 +66,9 @@ body, html {
     border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for better visibility */
 }
 
-/* Cosmic Face colors */
+/* Heavenly Face colors */
 .front, .back, .left, .right, .top, .bottom {
-    background: radial-gradient(circle at center, #3b0a45, #ad1c1c, #090a0f);
+    background: radial-gradient(circle at center, #f0f8ff, #c0c0f0, #e0e0ff); /* Light and airy gradient */
     background-size: cover;
 }
 
@@ -80,10 +80,10 @@ body, html {
     transform: translateX(-50%) rotate(-45deg);
     width: 200px;
     height: 20px;
-    background: linear-gradient(45deg, #ff4500, #ff6347);
+    background: linear-gradient(45deg, #ffddc1, #ffab91); /* Soft pastel gradient */
     z-index: 15;
     border-radius: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 05px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Ribbon tie styles */
@@ -94,10 +94,10 @@ body, html {
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(45deg, #ff4500, #ff6347);
+    background: linear-gradient(45deg, #ffddc1, #ffab91); /* Soft pastel gradient */
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     z-index: 20;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 05px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Rotation animation */
