@@ -110,9 +110,9 @@ body, html {
     width: 100%;
 }
 
-/* Base Poem Styling */
+/* Poem styling with consistent medium text size */
 .poem {
-    font-size: 2rem; /* Base font size */
+    font-size: 1.8rem; /* Medium font size for all screens */
     line-height: 1.2; /* Improved readability */
     white-space: pre-wrap;
     color: #fff5e1; /* Light creamy color */
@@ -126,32 +126,7 @@ body, html {
     animation: gradientMove 10s linear infinite;
 }
 
-/* Responsive font sizes */
-@media (max-width: 1200px) {
-    .poem {
-        font-size: 1.5rem; /* Adjust for medium screens */
-    }
-}
-
-@media (max-width: 800px) {
-    .poem {
-        font-size: 2rem; /* Increase font size for smaller screens */
-    }
-}
-
-@media (max-width: 500px) {
-    .poem {
-        font-size: 5rem; /* Increase font size for mobile screens */
-    }
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-}
-
-
+/* Remove media queries that change text size */
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
