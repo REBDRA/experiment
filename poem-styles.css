@@ -52,8 +52,8 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px; /* Reduced size for better fit */
-    height: 300px; /* Reduced size for better fit */
+    width: 300px;
+    height: 300px;
     background: radial-gradient(circle, #000 20%, transparent 60%);
     border-radius: 50%;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
@@ -70,22 +70,22 @@ body, html {
 }
 
 .planet:nth-child(1) {
-    width: 80px; /* Reduced size for better fit */
-    height: 80px; /* Reduced size for better fit */
+    width: 80px;
+    height: 80px;
     top: 20%;
     left: 10%;
 }
 
 .planet:nth-child(2) {
-    width: 120px; /* Reduced size for better fit */
-    height: 120px; /* Reduced size for better fit */
+    width: 120px;
+    height: 120px;
     top: 50%;
     left: 70%;
 }
 
 .planet:nth-child(3) {
-    width: 160px; /* Reduced size for better fit */
-    height: 160px; /* Reduced size for better fit */
+    width: 160px;
+    height: 160px;
     top: 80%;
     left: 30%;
 }
@@ -99,8 +99,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Match the black hole size */
-    width: 300px; /* Match the black hole size */
+    height: 300px;
+    width: 300px;
     z-index: 1;
 }
 
@@ -109,14 +109,14 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 50vh;
 }
 
 /* Poem styling with responsive medium text size */
 .poem {
-    font-size: 4vw; /* Responsive scaling */
-    line-height: 1.2;
+    font-size: 3vw;
+    line-height: 2.5vh;
     white-space: pre-wrap;
     color: #fff5e1;
     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
@@ -130,26 +130,26 @@ body, html {
 }
 
 /* Media Queries for small screens */
-@media (max-width: 500%) {
+@media (max-width: 500px) {
     .cosmic-sky::after {
-        width: 200%;
-        height: 200%;
+        width: 200px;
+        height: 200px;
     }
 
     .container {
-        height: 200%;
-        width: 200%;
+        height: 200px;
+        width: 200px;
     }
 
     .poem {
-        font-size: 6vw; /* Slightly larger text for small screens */
+        font-size: 6vw;
     }
 }
 
 /* Media Queries for large screens */
-@media (min-width: 1600%) {
+@media (min-width: 1600px) {
     .poem {
-        font-size: 2rem;
+        font-size: 32px;
     }
 }
 
