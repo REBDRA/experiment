@@ -44,10 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('touchend', function(e) {
         if (isRefreshing) {
+            // Ensure spinner visibility is reset correctly
             setTimeout(() => {
-                refreshSpinner.style.display = 'none'; // Ensure the spinner is hidden
+                refreshSpinner.style.display = 'none'; // Hide the spinner
                 isRefreshing = false;
-            }, 1000); // Hide spinner after refresh delay
+            }, 1000); // Adjust timing to match the refresh delay
         }
     });
 });
