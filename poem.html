@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="poem-styles.css">
 </head>
 <body>
+    <!-- Pull to refresh message -->
+    <div class="refresh-message">Refreshing...</div>
+    
+    <!-- Existing content -->
     <div class="cosmic-sky">
-        <div class="planet"></div>
-        <div class="planet"></div>
-        <div class="planet"></div>
+        <div class="planet" style="top: 20%; left: 10%;"></div>
+        <div class="planet" style="top: 50%; left: 50%;"></div>
+        <div class="planet" style="top: 80%; left: 80%;"></div>
     </div>
     <div class="container">
         <div class="poem-wrapper">
-            <div class="poem">
+            <div class="poem" id="poem">
                 To the one who guides the way,<br>
                 Inspiring us each and every day.<br>
                 With patience, wisdom, and so much care,<br>
@@ -26,5 +30,6 @@
             </div>
         </div>
     </div>
+    <script src="poem-script.js"></script>
 </body>
 </html>
