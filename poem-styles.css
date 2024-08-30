@@ -101,7 +101,7 @@ body, html {
     align-items: center;
     height: 300px;
     width: 300px;
-    z-index: 1;
+    z-index: 3;
 }
 
 /* Poem wrapper for centered text */
@@ -110,13 +110,13 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 50vh;
+    width: 100vh;
 }
 
 /* Poem styling with responsive medium text size */
 .poem {
     font-size: 3vw;
-    line-height: 2.5vh;
+    line-height: 110%;
     white-space: pre-wrap;
     color: #fff5e1;
     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
