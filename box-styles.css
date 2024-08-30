@@ -9,6 +9,23 @@ body, html {
     background: radial-gradient(circle at center, #c0c0f0, #e0e0ff); /* Soft, heavenly gradient */
     overflow: hidden;
 }
+/* Add this CSS to style the footer */
+/* Add this CSS to style the footer with a normal text style */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1; /* Light gray background */
+    text-align: center;
+    padding: 10px;
+    font-size: 14px; /* Normal font size */
+    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif; /* Normal font family */
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
 
 /* Container styles */
 .container {
