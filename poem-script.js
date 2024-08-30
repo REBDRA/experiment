@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Pull to refresh logic
     let startY = 0;
-    const refreshMessage = document.querySelector('.refresh-message');
+    const refreshSpinner = document.querySelector('.refresh-spinner');
     let isRefreshing = false;
 
     window.addEventListener('touchstart', function(e) {
@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (diffY > 50 && window.scrollY === 0) {
             if (!isRefreshing) {
                 isRefreshing = true;
-                refreshMessage.style.display = 'block'; // Show the refresh message
+                refreshSpinner.style.display = 'block'; // Show the spinner
                 setTimeout(function() {
-                    window.location.reload(); // Refresh the page after a short delay
+                    refreshSpinner.style.display = 'none'; // Hide the spinner before reloading
+                    window.location.reload(); // Refresh the page
                 }, 1000); // Adjust the delay as needed
             }
         }
@@ -44,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('touchend', function(e) {
         if (isRefreshing) {
             setTimeout(() => {
-                refreshMessage.style.display = 'none'; // Ensure the refresh message is hidden
+                refreshSpinner.style.display = 'none'; // Ensure the spinner is hidden
                 isRefreshing = false;
-            }, 1000); // Hide message after refresh delay
+            }, 1000); // Hide spinner after refresh delay
         }
     });
 });
