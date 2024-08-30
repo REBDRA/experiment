@@ -2,39 +2,41 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Great Vibes', cursive, sans-serif; /* Elegant writing style */
+    font-family: 'Great Vibes', cursive, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #c0c0f0, #e0e0ff); /* Soft, heavenly gradient */
+    background: radial-gradient(circle at center, #c0c0f0, #e0e0ff);
     overflow: hidden;
 }
-/* Add this CSS to style the footer */
-/* Add this CSS to style the footer with a normal text style */
+
+/* Footer styles */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f1f1f1; /* Light gray background */
+    background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
-    font-size: 14px; /* Normal font size */
-    color: #333; /* Dark gray text color */
-    font-family: Arial, sans-serif; /* Normal font family */
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
+
+/* Spinner styles */
 .refresh-spinner {
     position: fixed;
-    top: 10px; /* Adjust as needed */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    border: 4px solid rgba(0, 0, 0, 0.1); /* Light gray border */
+    border: 4px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-top: 4px solid #ccc; /* Light gray color for the spinning part */
+    border-top: 4px solid #ccc;
     animation: spin 1s linear infinite;
 }
 
@@ -55,20 +57,12 @@ footer {
     top: -50px;
     width: 100%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.5); /* Light, semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 5px;
 }
 
-/* Text styles */
-.text {
-    font-size: 2.5rem; /* Adjusted text size */
-    color: #f0f0f0; /* Lighter text color */
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.3), 0 0 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-    z-index: 10;
-}
-
-/* Gift box link styles */
+/* Box link styles */
 .gift-box {
     position: relative;
     width: 200px;
@@ -83,7 +77,7 @@ footer {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    animation: rotate 20s infinite linear; /* Slow rotation for a mystical effect */
+    animation: rotate 20s infinite linear;
 }
 
 /* Faces of the cube */
@@ -91,12 +85,12 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for better visibility */
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Heavenly Face colors */
 .front, .back, .left, .right, .top, .bottom {
-    background: radial-gradient(circle at center, #f0f8ff, #c0c0f0, #e0e0ff); /* Light and airy gradient */
+    background: radial-gradient(circle at center, #f0f8ff, #c0c0f0, #e0e0ff);
     background-size: cover;
 }
 
@@ -108,10 +102,10 @@ footer {
     transform: translateX(-50%) rotate(-45deg);
     width: 200px;
     height: 20px;
-    background: linear-gradient(45deg, #ffddc1, #ffab91); /* Soft pastel gradient */
+    background: linear-gradient(45deg, #ffddc1, #ffab91);
     z-index: 15;
     border-radius: 5px;
-    box-shadow: 05px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Ribbon tie styles */
@@ -122,10 +116,10 @@ footer {
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(45deg, #ffddc1, #ffab91); /* Soft pastel gradient */
+    background: linear-gradient(45deg, #ffddc1, #ffab91);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     z-index: 20;
-    box-shadow: 05px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Rotation animation */

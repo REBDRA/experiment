@@ -1,17 +1,24 @@
-function openBox() {
-    const box = document.querySelector('.box');
-    const lid = document.querySelector('.lid');
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to open the gift box and redirect to the poem page
+    function openBox() {
+        const box = document.querySelector('.box');
+        const lid = document.querySelector('.top'); // Assuming '.top' is used as the lid
 
-    // Add classes to trigger the open box animation
-    box.classList.add('open');
-    lid.classList.add('open');
+        // Add classes to trigger the open box animation
+        box.classList.add('open');
+        lid.classList.add('open');
 
-    // Redirect to the poem page after the animation completes
-    setTimeout(() => {
-        window.location.href = 'poem.html';
-    }, 1000); // Adjust this delay to match the duration of the animation
-}
-// Pull to refresh logic
+        // Redirect to the poem page after the animation completes
+        setTimeout(() => {
+            window.location.href = 'poem.html';
+        }, 1000); // Adjust this delay to match the duration of the animation
+    }
+
+    // Add click event listener to the gift box
+    const giftBox = document.querySelector('.gift-box');
+    giftBox.addEventListener('click', openBox);
+
+    // Pull to refresh logic
     let startY = 0;
     const refreshSpinner = document.querySelector('.refresh-spinner');
     let isRefreshing = false;
@@ -45,4 +52,5 @@ function openBox() {
                 isRefreshing = false;
             }, 1000); // Adjust timing to match the refresh delay
         }
+    });
 });
