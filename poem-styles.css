@@ -132,7 +132,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100%; /* Use full height of container */
-    width: 100%; /* Use full width of container */
+    width: 300%; /* Use full width of container */
     padding: 15px; /* Padding inside the wrapper */
     /*background: rgba(255, 255, 255, 0.1);  Semi-transparent background for the wrapper */
     border-radius: 10px; /* Rounded corners for the wrapper */
@@ -166,7 +166,7 @@ body, html {
 
     .container {
         height: 180px; /* Increased height for small screens */
-        width: 250px; /* Increased width for small screens */
+        width: 300px; /* Increased width for small screens */
     }
 
     .poem {
