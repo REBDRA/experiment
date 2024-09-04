@@ -132,9 +132,9 @@ body, html {
     width: 100vh;
 }
 
-/* Poem styling with responsive medium text size */
+/* Poem styling with responsive medium text size using clamp */
 .poem {
-    font-size: 3vw;
+    font-size: clamp(1rem, 2vw + 1rem, 3vw); /* Ensures dynamic sizing */
     line-height: 110%;
     white-space: pre-wrap;
     color: #fff5e1;
@@ -161,21 +161,21 @@ body, html {
     }
 
     .poem {
-        font-size: 4vw; /* A slightly smaller scaling factor */
+        font-size: clamp(0.8rem, 4vw, 2rem); /* Dynamic resizing for small screens */
     }
 }
 
 /* Adjust for larger screens, like desktops or large tablets */
 @media (min-width: 1200px) {
     .poem {
-        font-size: calc(1vw + 2rem); /* Slightly less aggressive scaling */
+        font-size: clamp(1rem, 1.5vw + 1rem, 4rem); /* Dynamic scaling on larger screens */
     }
 }
 
 /* Extra-large screens (like 4K) */
 @media (min-width: 1920px) {
     .poem {
-        font-size: calc(1.2vw + 2.5rem); /* Keep scaling moderate */
+        font-size: clamp(1.5rem, 1.2vw + 2rem, 5rem); /* Dynamic scaling on 4K+ screens */
     }
 }
 
