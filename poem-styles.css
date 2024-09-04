@@ -6,7 +6,6 @@ body, html {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     overflow: hidden;
 }
-
 /* Updated CSS for the lighter rotating spinner */
 .refresh-spinner {
     position: fixed;
@@ -25,6 +24,7 @@ body, html {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
 /* Cosmic sky background */
 .cosmic-sky {
@@ -57,8 +57,12 @@ body, html {
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Planet and black hole effects */
@@ -130,7 +134,7 @@ body, html {
 
 /* Poem styling with responsive medium text size */
 .poem {
-    font-size: calc(2vw + 1rem); /* Use 'calc' for dynamic size adjustment */
+    font-size: 3vw;
     line-height: 110%;
     white-space: pre-wrap;
     color: #fff5e1;
@@ -144,7 +148,7 @@ body, html {
     animation: gradientMove 10s linear infinite;
 }
 
-/* Media Queries for small screens */
+/* Adjust for small screens, e.g., smartphones */
 @media (max-width: 500px) {
     .cosmic-sky::after {
         width: 200px;
@@ -152,19 +156,26 @@ body, html {
     }
 
     .container {
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
     }
 
     .poem {
-        font-size: 5vw;
+        font-size: 4vw; /* A slightly smaller scaling factor */
     }
 }
 
-/* Media Queries for large screens (e.g., 1920x1080) */
-@media (min-width: 1600px) {
+/* Adjust for larger screens, like desktops or large tablets */
+@media (min-width: 1200px) {
     .poem {
-        font-size: calc(1.5vw + 3rem); /* Dynamic font size scaling for large screens */
+        font-size: calc(1vw + 2rem); /* Slightly less aggressive scaling */
+    }
+}
+
+/* Extra-large screens (like 4K) */
+@media (min-width: 1920px) {
+    .poem {
+        font-size: calc(1.2vw + 2.5rem); /* Keep scaling moderate */
     }
 }
 
