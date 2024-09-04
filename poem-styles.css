@@ -157,14 +157,14 @@ body, html {
     }
 
     .poem {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 }
 
 /* Media Queries for large screens (e.g., 1920x1080) */
 @media (min-width: 1600px) {
     .poem {
-        font-size: calc(1.5vw + 1rem); /* Dynamic font size scaling for large screens */
+        font-size: calc(1.5vw + 3rem); /* Dynamic font size scaling for large screens */
     }
 }
 
