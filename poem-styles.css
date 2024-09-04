@@ -128,7 +128,6 @@ body, html {
 
 /* Poem wrapper for centered text with distinct styles */
 .poem-wrapper {
-    font-size: calc(3rem + 1rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,85 +158,33 @@ body, html {
 
 
 /* Media queries for responsiveness */
-
-/* For smaller screens like phones */
-@media (max-width: 480px) {
+@media (min-width: 360px) and (max-width: 480px) {
     .cosmic-sky::after {
-        width: 150%; /* Adjusted size for smaller screens */
-        height: 150%;
+        width: 200px;
+        height: 200px;
     }
 
     .container {
-        width: 90%; /* More flexible width for smaller screens */
-        max-width: none; /* Remove max-width constraint */
-        height: auto; /* Allow height to adjust based on content */
-        padding: 10%; /* Adjust padding for better fit */
-         z-index: 3;
-    }
-
-    .poem-wrapper {
-        padding: 10%; /* Adjust padding inside the wrapper */
+        height: 180px; /* Increased height for small screens */
+        width: 300px; /* Increased width for small screens */
     }
 
     .poem {
-        font-size: clamp(2.5rem, 6vw + 2rem, 4rem); /* Larger text for small screens */
-        line-height: 1.4; /* Adjust line-height for readability */
-        text-align: center; /* Ensure text is centered */
+        font-size: clamp(2rem, 4vw + 3rem, 2.5rem); /* Adjust font size for small screens */
     }
 }
 
-/* For tablets and medium-sized screens */
-@media (min-width: 481px) and (max-width: 1199px) {
-    .cosmic-sky::after {
-        width: 250px; /* Size for medium screens */
-        height: 250px;
-    }
-
-    .poem-container {
-        width: 80vw; /* Flexible width for medium screens */
-        max-width: 500px; /* Adjust max-width */
-    }
-
-    .poem {
-        font-size: clamp(2rem, 5vw, 3rem); /* Responsive text size */
-        line-height: 1.5; /* Adjust line-height */
-    }
-}
-
-/* For large screens */
 @media (min-width: 1200px) {
-    .cosmic-sky::after {
-        width: 300px; /* Size for large screens */
-        height: 300px;
-    }
-
-    .poem-container {
-        width: 70vw; /* Flexible width for large screens */
-        max-width: 600px; /* Adjust max-width */
-    }
-
     .poem {
-        font-size: clamp(1.5rem, 1.2vw + 1rem, 4rem); /* Dynamic scaling for larger screens */
+        font-size: clamp(1rem, 1.5vw + 1rem, 4rem); /* Dynamic scaling on larger screens */
     }
 }
 
-/* For extra-large screens (4K and above) */
 @media (min-width: 1920px) {
-    .cosmic-sky::after {
-        width: 400px; /* Size for extra-large screens */
-        height: 400px;
-    }
-
-    .poem-container {
-        width: 60vw; /* Flexible width for extra-large screens */
-        max-width: 700px; /* Adjust max-width */
-    }
-
     .poem {
-        font-size: clamp(1.5rem, 1.2vw + 2rem, 5rem); /* Dynamic scaling for extra-large screens */
+        font-size: clamp(1.5rem, 1.2vw + 2rem, 5rem); /* Dynamic scaling on 4K+ screens */
     }
 }
-
 
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
