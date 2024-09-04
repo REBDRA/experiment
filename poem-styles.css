@@ -161,9 +161,10 @@ body, html {
     }
 
     .poem {
-        font-size: clamp(1rem, 1.5vw + 1rem, 4rem); /* Dynamic resizing for small screens */
+        font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); /* Increase minimum font size for small screens */
     }
 }
+
 
 /* Adjust for larger screens, like desktops or large tablets */
 @media (min-width: 1200px) {
