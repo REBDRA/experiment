@@ -155,37 +155,6 @@ body, html {
 }
 
 
-
-
-/* Media queries for responsiveness */
-@media (min-width: 360px) and (max-width: 480px) {
-    .cosmic-sky::after {
-        width: 200px;
-        height: 200px;
-    }
-
-    .container {
-        height: 180px; /* Increased height for small screens */
-        width: 300px; /* Increased width for small screens */
-    }
-
-    .poem {
-        font-size: clamp(2rem, 4vw + 3rem, 2.5rem); /* Adjust font size for small screens */
-    }
-}
-
-@media (min-width: 1200px) {
-    .poem {
-        font-size: clamp(1rem, 1.5vw + 1rem, 4rem); /* Dynamic scaling on larger screens */
-    }
-}
-
-@media (min-width: 1920px) {
-    .poem {
-        font-size: clamp(1.5rem, 1.2vw + 2rem, 5rem); /* Dynamic scaling on 4K+ screens */
-    }
-}
-
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
