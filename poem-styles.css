@@ -6,6 +6,7 @@ body, html {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     overflow: hidden;
 }
+
 /* Updated CSS for the lighter rotating spinner */
 .refresh-spinner {
     position: fixed;
@@ -24,7 +25,6 @@ body, html {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 
 /* Cosmic sky background */
 .cosmic-sky {
@@ -57,12 +57,8 @@ body, html {
 }
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Planet and black hole effects */
@@ -134,7 +130,7 @@ body, html {
 
 /* Poem styling with responsive medium text size */
 .poem {
-    font-size: 3vw;
+    font-size: calc(2vw + 1rem); /* Use 'calc' for dynamic size adjustment */
     line-height: 110%;
     white-space: pre-wrap;
     color: #fff5e1;
@@ -165,10 +161,10 @@ body, html {
     }
 }
 
-/* Media Queries for large screens */
+/* Media Queries for large screens (e.g., 1920x1080) */
 @media (min-width: 1600px) {
     .poem {
-        font-size: 32px;
+        font-size: calc(1.5vw + 1rem); /* Dynamic font size scaling for large screens */
     }
 }
 
