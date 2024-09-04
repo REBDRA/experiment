@@ -162,19 +162,19 @@ body, html {
 /* For smaller screens like phones */
 @media (max-width: 480px) {
     .cosmic-sky::after {
-        width: 150px; /* Adjusted size for smaller screens */
-        height: 150px;
+        width: 150%; /* Adjusted size for smaller screens */
+        height: 150%;
     }
 
-    .poem-container {
-        width: 90vw; /* More flexible width for smaller screens */
+    .container {
+        width: 90%; /* More flexible width for smaller screens */
         max-width: none; /* Remove max-width constraint */
         height: auto; /* Allow height to adjust based on content */
-        padding: 10px; /* Adjust padding for better fit */
+        padding: 10%; /* Adjust padding for better fit */
     }
 
     .poem-wrapper {
-        padding: 10px; /* Adjust padding inside the wrapper */
+        padding: 10%; /* Adjust padding inside the wrapper */
     }
 
     .poem {
