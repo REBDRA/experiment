@@ -51,4 +51,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1000); // Adjust timing to match the refresh delay
         }
     });
+
+    // Scroll-triggered effects logic
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+
+        // Example: Adjust the opacity of the poem based on scroll position
+        const maxScroll = 200; // Adjust as needed for your use case
+        const opacityValue = Math.min(1, scrollPosition / maxScroll);
+        poemElement.style.opacity = opacityValue;
+
+        // Example: Trigger an animation after scrolling past a certain point
+        const animationTriggerPoint = 400; // Pixels scrolled before triggering
+        if (scrollPosition > animationTriggerPoint) {
+            poemElement.classList.add('animate-poem'); // Ensure this class has animation styles defined in your CSS
+        } else {
+            poemElement.classList.remove('animate-poem');
+        }
+    });
 });
