@@ -118,8 +118,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px; /* Adjust as needed */
-    width: 400px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
     z-index: 3;
     /*background: rgba(0, 0, 0, 0.5);  Semi-transparent background */
     padding: 20px; /* Padding inside the container */
@@ -131,36 +131,48 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300%; /* Use full height of container */
-    width: 400%; /* Use full width of container */
+    height: 100%; /* Use full height of container */
+    width: 300%; /* Use full width of container */
     padding: 15px; /* Padding inside the wrapper */
     /*background: rgba(255, 255, 255, 0.1);  Semi-transparent background for the wrapper */
     border-radius: 10px; /* Rounded corners for the wrapper */
 }
 
-/* Poem styling with responsive text size */
+/* Poem styling with responsive medium text size using clamp */
 .poem {
-    font-size: clamp(2rem, 2vw + 1rem, 3vw); /* Default scaling */
-    line-height: 1.5;
+    font-size: clamp(3rem, 2vw + 1rem, 3vw); /* Ensures dynamic sizing */
+    line-height: 1.5; /* Adjust line-height */
     white-space: pre-wrap;
-    color: #f5f5dc;
+    color: #f5f5dc; /* Creamy color */
     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 50px;
     overflow: hidden;
     animation: gradientMove 10s linear infinite;
 }
 
-/* Larger text on phones, specifically targeting common Samsung resolutions */
+
+
+
+/* Media queries for responsiveness */
 @media (min-width: 360px) and (max-width: 480px) {
+    .cosmic-sky::after {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        height: 180px; /* Increased height for small screens */
+        width: 300px; /* Increased width for small screens */
+    }
+
     .poem {
-        font-size: clamp(3.5rem, 5vw + 2rem, 4.5rem); /* Larger font size for Samsung-like devices */
+        font-size: clamp(2rem, 4vw + 3rem, 2.5rem); /* Adjust font size for small screens */
     }
 }
-
 
 @media (min-width: 1200px) {
     .poem {
