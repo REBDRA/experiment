@@ -148,8 +148,8 @@ body, html {
     animation: gradientMove 10s linear infinite;
 }
 
-/* Adjust for small screens, e.g., smartphones */
-@media (max-width: 500px) {
+/* Adjust for standard Samsung phones and similar devices */
+@media (min-width: 360px) and (max-width: 480px) {
     .cosmic-sky::after {
         width: 200px;
         height: 200px;
@@ -161,10 +161,9 @@ body, html {
     }
 
     .poem {
-        font-size: clamp(3rem, 3vw + 1rem, 2.5rem); /* Increase minimum font size for small screens */
+        font-size: clamp(2rem, 4vw + 1rem, 2.5rem); /* Adjust font size for small screens */
     }
 }
-
 
 /* Adjust for larger screens, like desktops or large tablets */
 @media (min-width: 1200px) {
