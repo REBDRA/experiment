@@ -132,15 +132,15 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 150%; /* Use full height of container */
-    width: 200%; /* Use full width of container */
+    width: 150%; /* Use full width of container */
     padding: 15px; /* Padding inside the wrapper */
     /*background: rgba(255, 255, 255, 0.1);  Semi-transparent background for the wrapper */
-    border-radius: 10px; /* Rounded corners for the wrapper */
+    border-radius: 20%; /* Rounded corners for the wrapper */
 }
 
 /* Poem styling with responsive medium text size using clamp */
 .poem {
-    font-size: clamp(4rem, 2vw + 1rem, 4vw); /* Ensures dynamic sizing */
+    font-size: clamp(4rem, 4vw + 1rem, 4vw); /* Ensures dynamic sizing */
     line-height: 1.5; /* Adjust line-height */
     white-space: pre-wrap;
     color: #f5f5dc; /* Creamy color */
