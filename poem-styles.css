@@ -156,6 +156,7 @@ body, html {
 
 
 
+
 /* Media queries for responsiveness */
 @media (min-width: 360px) and (max-width: 480px) {
     .cosmic-sky::after {
@@ -164,8 +165,8 @@ body, html {
     }
 
     .container {
-        height: 150px;
-        width: 150px;
+        height: 180px; /* Increased height for small screens */
+        width: 250px; /* Increased width for small screens */
     }
 
     .poem {
