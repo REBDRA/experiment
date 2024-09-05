@@ -140,7 +140,7 @@ body, html {
 
 /* Poem styling with responsive medium text size using clamp */
 .poem {
-    font-size: clamp(4rem, 5vh, 6rem); /* Ensures dynamic sizing */
+    font-size: clamp(4rem, 50vh, 6rem); /* Ensures dynamic sizing */
     line-height: 2; /* Adjust line-height */
     white-space: pre-wrap;
     color: #f5f5dc; /* Creamy color */
@@ -153,7 +153,14 @@ body, html {
     overflow: hidden;
     animation: gradientMove 10s linear infinite;
 }
-
+/* Styling for the last word/phrase */
+.last-word {
+    display: block;
+    margin-top: 20px; /* Adjusts spacing from the previous lines */
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    text-align: center;
+    color: #ffeb3b; /* Highlighted color for emphasis */
+}
 
 @keyframes gradientMove {
     0% { background-position: 0% 0%; }
