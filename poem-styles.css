@@ -141,7 +141,7 @@ body, html {
 /* Poem styling with responsive medium text size using clamp */
 .poem {
     font-size: clamp(4rem, 4vw + 1rem, 4vw); /* Ensures dynamic sizing */
-    line-height: 1.5; /* Adjust line-height */
+    line-height: 2; /* Adjust line-height */
     white-space: pre-wrap;
     color: #f5f5dc; /* Creamy color */
     background: linear-gradient(45deg, #f0f8ff, #e0e0ff, #c0c0f0);
